@@ -38,8 +38,8 @@ echo 'Installing Parse Server Dashboard and PM2';
 sleep 2;
 
 npm install -g parse-server mongodb-runner parse-dashboard pm2@latest --no-optional --no-shrinkwrap
-git clone https://github.com/ParsePlatform/parse-server-example.git
-cd parse-server-example
+git clone https://github.com/ParsePlatform/parse-server-example.git parse-server
+cd parse-server
 
 echo
 echo 'Downloading Parse Server Dashboard Configrtion Files';
@@ -51,8 +51,8 @@ npm -g install
 echo
 echo 'Adding APP_ID and MASTER_KEY';
 sleep 2;
-sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || '$APP_ID',/" /root/parse-server-example/index.js
-sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || '$MASTER_KEY',/" /root/parse-server-example/index.js
+sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || '$APP_ID',/" /root/parse-server/index.js
+sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || '$MASTER_KEY',/" /root/parse-server/index.js
 echo 'Happy Ending';
 echo
 pm2 start index.js && pm2 startup
