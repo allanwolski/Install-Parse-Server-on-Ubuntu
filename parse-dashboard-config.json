@@ -1,16 +1,16 @@
 {
   "apps": [
     {
-      "serverURL": "http://localhost:1337/parse",
-      "appId": "KLOUDBOY123",
-      "masterKey": "KLOUDBOY456",
-      "appName": "KLOUDBOY"
+      "serverURL": "http://192.168.123.138:1337/parse",
+      "appId": "com.bsoft.emitapramim",
+      "masterKey": "f63cdc1010d47cb96280b057ee0233ce5195bc518da3",
+      "appName": "EmitaPraMim"
     }
   ],
   "users": [
       {
            "user":"admin",
-           "pass":"kloudboy"
+           "pass":"admin"
       }
   ]
 }
