@@ -3,7 +3,7 @@
     {
       "serverURL": "http://192.168.123.138:1337/parse",
       "appId": "com.bsoft.emitapramim",
-      "masterKey": "",
+      "masterKey": "f63cdc1010d47cb96280b057ee0233ce5195bc518da3",
       "appName": "EmitaPraMim"
     }
   ],
