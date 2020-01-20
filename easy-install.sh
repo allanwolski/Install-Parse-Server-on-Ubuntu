@@ -24,7 +24,7 @@ service mongod start
 echo 'Installing Parse Server Dashboard and PM2';
 sleep 2;
 
-npm install -g parse-server mongodb-runner parse-dashboard pm2@latest --no-optional --no-shrinkwrap
+npm install -g parse-server parse-dashboard pm2@latest --no-optional --no-shrinkwrap
 git clone https://github.com/ParsePlatform/parse-server-example.git parse-server
 cd parse-server
 
