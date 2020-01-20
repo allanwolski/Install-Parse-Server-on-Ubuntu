@@ -16,7 +16,7 @@ echo 'installing Mongo DB';
 sleep 2;
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 apt-get update
 apt-get install -y mongodb-org
 service mongod start
@@ -25,8 +25,8 @@ echo 'Installing Parse Server Dashboard and PM2';
 sleep 2;
 
 npm install -g parse-server mongodb-runner parse-dashboard pm2@latest --no-optional --no-shrinkwrap
-git clone https://github.com/ParsePlatform/parse-server-example.git
-cd parse-server-example
+git clone https://github.com/ParsePlatform/parse-server-example.git parse-server
+cd parse-server
 
 echo
 echo 'Downloading Parse Server Dashboard Configrtion Files';
@@ -38,8 +38,8 @@ npm -g install
 echo
 echo 'Adding APP_ID and MASTER_KEY';
 sleep 2;
-sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || 'KLOUDBOY123',/" /root/parse-server-example/index.js
-sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || 'KLOUDBOY456',/" /root/parse-server-example/index.js
+sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || 'com.bsoft.emitapramim',/" /root/parse-server-example/index.js
+sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || 'f63cdc1010d47cb96280b057ee0233ce5195bc518da3',/" /root/parse-server-example/index.js
 echo 'Happy Ending';
 echo
 pm2 start index.js && pm2 startup
