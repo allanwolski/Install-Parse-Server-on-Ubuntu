@@ -38,8 +38,8 @@ npm -g install
 echo
 echo 'Adding APP_ID and MASTER_KEY';
 sleep 2;
-sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || 'com.bsoft.emitapramim',/" /root/parse-server-example/index.js
-sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || 'f63cdc1010d47cb96280b057ee0233ce5195bc518da3',/" /root/parse-server-example/index.js
+sudo sed -i "s/appId: process.env.APP_ID || .*/appId: process.env.APP_ID || 'com.bsoft.emitapramim',/" /root/parse-server/index.js
+sudo sed -i "s/masterKey: process.env.MASTER_KEY || .*/masterKey: process.env.MASTER_KEY || 'f63cdc1010d47cb96280b057ee0233ce5195bc518da3',/" /root/parse-server/index.js
 echo 'Happy Ending';
 echo
 pm2 start index.js && pm2 startup
