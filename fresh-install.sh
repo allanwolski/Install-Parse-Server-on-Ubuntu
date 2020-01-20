@@ -29,7 +29,7 @@ echo 'installing Mongo DB';
 sleep 2;
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
 apt-get update
 apt-get install -y mongodb-org
 service mongod start
@@ -45,8 +45,8 @@ echo
 echo 'Downloading Parse Server Dashboard Configrtion Files';
 sleep 2;
 
-sudo curl https://raw.githubusercontent.com/bajpangosh/Install-Parse-Server-on-Ubuntu/master/parse-dashboard-config.json > parse-dashboard-config.json
-sudo curl https://raw.githubusercontent.com/bajpangosh/Install-Parse-Server-on-Ubuntu/master/dashboard-running.json > dashboard-running.json
+sudo curl https://raw.githubusercontent.com/allanwolski/Install-Parse-Server-on-Ubuntu/master/parse-dashboard-config.json > parse-dashboard-config.json
+sudo curl https://raw.githubusercontent.com/allanwolski/Install-Parse-Server-on-Ubuntu/master/dashboard-running.json > dashboard-running.json
 npm -g install
 echo
 echo 'Adding APP_ID and MASTER_KEY';
